@@ -1,0 +1,38 @@
+def round_up(x):
+    return round(x + 0.5)
+
+def round_down(x):
+    return round(x - 0.5)
+
+
+print("=== Akıllı Yuvarlama Programı ===")
+
+# string
+isim = input("Adını gir: ")
+
+# float
+sayi = float(input("Bir ondalıklı sayı gir: "))
+
+# int
+yas = int(input("Yaşını gir: "))
+
+# bool (kontrol)
+reşit_mi = yas >= 18
+
+print("\n--- Sonuçlar ---")
+print("Merhaba", isim)
+
+print("Girilen sayı:", sayi)
+print("Yukarı yuvarlama:", round_up(sayi))
+print("Aşağı yuvarlama:", round_down(sayi))
+
+# bool kullanımı
+if reşit_mi:
+    print("Reşitsin (bool):", reşit_mi)
+else:
+    print("Reşit değilsin (bool):", reşit_mi)
+
+# ekstra özellik
+fark = round_up(sayi) - round_down(sayi)
+
+print("Yuvarlama farkı:", fark)
